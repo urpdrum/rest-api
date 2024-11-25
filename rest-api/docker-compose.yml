@@ -10,9 +10,9 @@ services:
       db:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5433/saboresdb
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: Equili2000
+      SPRING_DATASOURCE_URL: postgresql://root:2P83JxqDx9bAJX04V4rZCUdLLZRKsZbI@dpg-ct2aroa3esus73d6mnf0-a/saboresdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 2P83JxqDx9bAJX04V4rZCUdLLZRKsZbI
     networks:
       - rest-api-network
   db:
@@ -21,8 +21,8 @@ services:
     ports:
       - "5433:5433"
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: Equili2000
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 2P83JxqDx9bAJX04V4rZCUdLLZRKsZbI
       POSTGRES_DB: saboresdb
     networks:
       - rest-api-network
