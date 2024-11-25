@@ -10,7 +10,7 @@ services:
       db:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://dpg-ct2aroa3esus73d6mnf0-a/saboresdb
+      SPRING_DATASOURCE_URL: postgresql://root:2P83JxqDx9bAJX04V4rZCUdLLZRKsZbI@dpg-ct2aroa3esus73d6mnf0-a/saboresdb
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 2P83JxqDx9bAJX04V4rZCUdLLZRKsZbI
     networks:
@@ -36,7 +36,7 @@ services:
       # Set the retries to 5
       retries: 5
     volumes:
-      - saboresdb-data:/var/lib/postgresql/data
+      - dpg-ct2aroa3esus73d6mnf0-a-data:/var/lib/postgresql/data
 
 volumes:
   saboresdb-data:
